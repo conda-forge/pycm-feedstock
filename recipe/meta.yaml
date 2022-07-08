@@ -1,16 +1,16 @@
 {% set name = "pycm" %}
-{% set version = "7.5.6" %}
+{% set version = "7.5.7" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: http://software.igwn.org/lscsoft/source/{{ name }}-{{ version }}.tar.gz
-  sha256: c9de233951578f774f721e7356dc2331423e3dd8873f83e8dc7da00ddef250fc
+   url: http://software.igwn.org/lscsoft/source/{{ name }}-{{ version }}.tar.gz
+   sha256: d399df7746c9e3a040d6438abb856d28e007bc7fb30cbe114515eba5fb7aa600
 
 build:
-  number: 2
+  number: 0
   skip: true  # [not linux]
 
 requirements:
@@ -20,11 +20,11 @@ requirements:
     - make  # [unix]
     - ctypesgen >=1.0.2
   host:
-    - cm >=9.0.1
+    - cm >=10.3.4
     - ctypesgen >=1.0.2
     - python
   run:
-    - cm >=9.0.1
+    - cm >=10.3.4
     - python
 
 test:
