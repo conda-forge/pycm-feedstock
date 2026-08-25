@@ -2,20 +2,20 @@ schema_version: 1
 
 context:
   name: pycm
-  version: 7.5.8
+  version: 7.5.9
 
 package:
   name: ${{ name }}
   version: ${{ version }}
 
 source:
-  url: http://software.igwn.org/lscsoft/source/${{ name }}-${{ version }}.tar.gz
-  sha256: 1d0acc7e5f05043a4819964bfc17b67c26f9d22d9eb2b72e9a121cfa34135bce
+  url: https://git.ligo.org/virgo/virgoapp/PyCm/-/archive/${{ version }}/PyCm-${{ version }}.tar.gz
+  sha256: 2f29fbe86b7a1a7099049055b18b45de7497f392a9f2d89a366e8d5f4f6aed6e
   patches:
     - 0001-Use-IS_WRITABLE-unary-test.patch
 
 build:
-  number: 2
+  number: 0
   skip: not linux
 
 requirements:
